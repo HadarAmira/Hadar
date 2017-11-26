@@ -5,12 +5,12 @@
  *      Author: zvi liebskind
  */
 #include "PlayerLogic.h"
-#include "BoardSize.h"
 #include "Board.h"
 #include "Rule.h"
 #include "FlipRule.h"
 #include "Point.h"
 #include <vector>
+#include <iostream>
 
 #ifndef GAME_H_
 #define GAME_H_
@@ -24,19 +24,16 @@ public:
 	 * p1 - the first player
 	 * p2 - the second player
 	 */
-	Game(BoardSize size, PlayerLogic* p1, PlayerLogic* p2);
-	/*
-	 * returns - player1
+	Game(int size, PlayerSign p1, PlayerSign p2);
+	/**
+	 * creates a new game
+	 * the game's board
 	 */
-	PlayerLogic* getP1() const;
-	/*
-	 * returns - player2
-	 */
-	PlayerLogic* getP2() const;
+	Game(Board board);
 	/*
 	 * returns - the game board
 	 */
-	Board* getBoard() const;
+	Board* getBoard();
 	/**
 	 * adds a new rule to the game
 	 */
@@ -45,29 +42,29 @@ public:
 	 * player - the player who should move
 	 * returns - a list of possible points to put disk on
 	 */
-	vector<Point> getPossibleMoves(PlayerLogic* player);
+	vector<Point> getPossibleMoves(PlayerSign player);
 	/**
-	 * updates the board according to the player's move
-	 * move - point to put new disk on
-	 * player - the player who moves
+	 * player - the player who should move
+	 * returns - true if the player has at least one move
 	 */
-	void updateBoard(Point move, PlayerLogic* player);
-	/**
-	 * return true if there is no more possible moves
-	 */
-	bool hasFinished();
+	bool hasPossibleMoves(PlayerSign player);
 	/**
 	 * prints winning notification
 	 */
-	void notifyWinner();
-	virtual ~Game();
+	void notifyWinner(PlayerSign p1, PlayerSign p2) const;
+	/**
+	 * move - the place to put new disk
+	 * player - the moving player
+	 */
+	void updateBoard(Point move, PlayerSign player);
 
 private:
-	PlayerLogic* p1;
-	PlayerLogic* p2;
 	Board* board;
 	vector<Rule*> rules;
-	bool validateMove(PlayerLogic* player, Point move);
+	/**
+	 * checks if the wanted move is legal
+	 */
+	bool validateMove(PlayerSign player, Point move);
 
 };
 

@@ -9,6 +9,7 @@ using namespace std;
 
 #ifndef POINT_H_
 #define POINT_H_
+
 class Point {
 public:
 	/**
@@ -26,13 +27,17 @@ public:
 	 */
 	int getRow() const;
 	/**
+	 * col - new col to set for the point
+	 */
+	void setCol(int col);
+	/**
+	 * row - new row to set for the point
+	 */
+	void setRow(int row);
+	/**
 	 * returns - true if the point are equivalent
 	 */
 	bool equals(Point o) const;
-	/**
-	 * returns string representation of the point
-	 */
-	string toString() const;
 	/**
 	 * creates a point from a comma separated string
 	 * return - the desired point, (-1,-1) for invalid input

@@ -1,40 +1,40 @@
 /*
  * PcPlayer.cpp
  *
- *  Created on: Nov 3, 2017
+ *  Created on: Nov 24, 2017
  *      Author: zvi
  */
 
 #include "PcPlayer.h"
-#include <string>
-using namespace std;
 
-PcPlayer::PcPlayer(char sign) :
-	sign(sign) {
-
+PcPlayer::PcPlayer(PlayerSign sign, Game* game) :
+	sign(sign), game(game) {
 }
 
-PlayerLogic::~PlayerLogic() {
-
+PlayerSign PcPlayer::getSign() const {
+	return sign;
 }
 
-Point PcPlayer::chooseMove(vector<Point> &list, Graphic* g) const {
+void PcPlayer::playMove(Graphic *g, PlayerLogic *other) {
+
+	// gets possible moves
+	vector<Point> list = game->getPossibleMoves(sign);
+
 	g->print(sign);
 	string s = ": It's your move.";
 	g->print(s);
 	g->breakLine();
 
 	string input;
-	int row = -1, col = -1;
-
-	while (row == -1 && col == -1) {
+	Point ans = Point(-1, -1);
+	bool valid = false;
+	// asks for input until a valid point is received
+	while (!valid) {
 		s = "Your possible moves: ";
 		g->print(s);
+		//prints all possibilities
 		for (std::vector<Point>::iterator it = list.begin(); it != list.end(); ++it) {
-			int r =it->getRow();
-			int c =it->getCol();
-			Point p(r,c);
-			g->printPoint(p);
+			g->printPoint((*it));
 			if (it != list.end() - 1) {
 				g->print(',');
 
@@ -45,10 +45,10 @@ Point PcPlayer::chooseMove(vector<Point> &list, Graphic* g) const {
 		string s = "Please enter your move row,col: ";
 		g->print(s);
 
-
+		//gets user response
 		input = g->getInput();
 		g->breakLine();
-		Point ans = Point::getPointFromString(input);
+		ans = Point::getPointFromString(input);
 		//invalid input
 		if (ans.getRow() == -1 && ans.getCol() == -1) {
 			continue;
@@ -57,17 +57,16 @@ Point PcPlayer::chooseMove(vector<Point> &list, Graphic* g) const {
 		// check if point in options
 		for (std::vector<Point>::iterator it = list.begin(); it != list.end(); ++it) {
 			if (it->equals(ans)) {
-				row = it->getRow();
-				col = it->getCol();
+				valid = true;
 				break;
 			}
 		}
 	}
 
-	return Point(row, col);
+	//updates the board according to the pick
+	game->updateBoard(ans, sign);
 }
 
-char PcPlayer::getSign() const {
-	return sign;
+bool PcPlayer::hasPossibleMove(){
+	return game->hasPossibleMoves(sign);
 }
-

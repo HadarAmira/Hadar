@@ -5,8 +5,7 @@
  *      Author: zvi
  */
 #include "PlayerLogic.h"
-using namespace std;
-
+#include "Game.h"
 
 #ifndef PCPLAYER_H_
 #define PCPLAYER_H_
@@ -16,19 +15,15 @@ public:
 	/**
 	 * creates a new local player
 	 * sign - the char that represents the player on board
+	 * game - the current game
 	 */
-	PcPlayer(char sign);
-	/**
-	 * let the player chose his next move
-	 * list - available moves
-	 */
-	Point chooseMove(vector<Point>& list,Graphic* g) const;
-	/**
-	 * returns - the sign of this player
-	 */
-	char getSign() const;
+	PcPlayer(PlayerSign sign, Game* game);
+	void playMove(Graphic *g,PlayerLogic *other);
+	PlayerSign getSign() const;
+	bool hasPossibleMove();
 private:
-	char sign;
+	PlayerSign sign;
+	Game* game;
 };
 
 #endif /* PCPLAYER_H_ */

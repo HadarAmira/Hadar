@@ -7,6 +7,7 @@
 #include <vector>
 #include "Point.h"
 #include "Graphic.h"
+#include "PlayerSign.h"
 using namespace std;
 
 #ifndef PLAYERLOGIC_H_
@@ -14,9 +15,20 @@ using namespace std;
 
 class PlayerLogic {
 public:
-	virtual ~PlayerLogic();
-	virtual Point chooseMove(vector<Point> &list, Graphic* g) const = 0;
-	virtual char getSign() const =0;
+	/**
+	 * let the player chose his next move
+	 * g - used graphic
+	 * other - the competitor
+	 */
+	virtual void playMove(Graphic *g,PlayerLogic* p2) = 0;
+	/**
+	 * returns - the sign of this player
+	 */
+	virtual PlayerSign getSign() const =0;
+	/**
+	 * returns true if the player has at least one possible move
+	 */
+	virtual bool hasPossibleMove() =0;
 };
 
 #endif /* PLAYERLOGIC_H_ */

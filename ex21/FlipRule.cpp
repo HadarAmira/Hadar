@@ -1,23 +1,19 @@
 /*
  * FlipRule.cpp
  *
- *  Created on: Nov 4, 2017
+ *  Created on: Nov 24, 2017
  *      Author: zvi
  */
 
 #include "FlipRule.h"
 
-FlipRule::FlipRule() {
-}
-
-Rule::~Rule(){
+FlipRule::FlipRule(){
 
 }
 
+bool FlipRule::validate(PlayerSign player, Point move, Board* board) const {
 
-bool FlipRule::validate(PlayerLogic* player, Point move, Board* board) const {
-
-	char sign = player->getSign();
+	char sign = player;
 	int col = move.getCol();
 	int row = move.getRow();
 
@@ -118,11 +114,11 @@ bool FlipRule::validate(PlayerLogic* player, Point move, Board* board) const {
 	return false;
 }
 
-vector<Point> FlipRule::listChanges(PlayerLogic *player, Point move,
+vector<Point> FlipRule::listChanges(PlayerSign player, Point move,
 		Board *board) const {
 	vector<Point> changes;
 
-	char sign = player->getSign();
+	char sign = player;
 	int row = move.getRow();
 	int col = move.getCol();
 

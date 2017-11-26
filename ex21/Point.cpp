@@ -1,29 +1,21 @@
 /*
  * Point.cpp
  *
- *  Created on: Nov 3, 2017
+ *  Created on: Nov 24, 2017
  *      Author: zvi
  */
 
 #include "Point.h"
-using namespace std;
 
-Point::Point(int row, int col) :
-	row(row), col(col) {
-
+Point::Point(int row, int col): row(row), col(col)
+{
 }
 
-int Point::getRow() const {
+int Point::getRow() const
+{
 	return row;
 }
 
-int Point::getCol() const {
-	return col;
-}
-
-bool Point::equals(Point o) const {
-	return col == o.col && row == o.row;
-}
 
 Point Point::getPointFromString(string s) {
 	int row = 0, col = 0;
@@ -57,4 +49,29 @@ Point Point::getPointFromString(string s) {
 
 	return Point(row,col);
 }
+
+
+
+int Point::getCol() const
+{
+	return col;
+}
+
+
+
+void Point::setRow(int row)
+{
+	this->row=row;
+}
+
+void Point::setCol(int col)
+{
+	this->col=col;
+}
+
+bool Point::equals(Point o) const
+{
+	return col == o.col && row == o.row;
+}
+
 

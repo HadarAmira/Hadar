@@ -16,60 +16,56 @@ Graphic::~Graphic() {
 
 }
 
-void Console::printPoint(Point p) const{
-	cout << "(" << p.getRow()+1 << "," << p.getCol()+1 << ")";
+void Console::printPoint(Point p) const {
+	cout << "(" << p.getRow() + 1 << "," << p.getCol() + 1 << ")";
 }
 
-void Console::print(string& s) const
-{
-	cout << s ;
+void Console::print(string& s) const {
+	cout << s;
 }
 
-void Console::print(char c) const
-{
-	cout << c ;
+void Console::print(char c) const {
+	cout << c;
 }
 
-void Console::print(char* c) const
-{
-	cout << c ;
+void Console::print(char* c) const {
+	cout << c;
 }
 
+void Console::printBoard(Board* board) const {
+	char tile;
 
-void Console::printBoard(Board* board) const
-{
 	//print header
 	cout << " |";
-	for (int i = 1; i <= 8; i++) {
+	for (int i = 1; i <= board->getSize(); i++) {
 		cout << " " << i << " |";
 	}
 	cout << endl;
 	//print board
 	for (int i = 0; i < board->getSize(); i++) {
 		//print separator line
-		for (int k = 0; k < 34; k++) {
+		for (int k = 0; k < board->getSize() * 4 + 2; k++) {
 			cout << '-';
 		}
-		cout<<endl;
+		cout << endl;
 		//print line
-		cout << i+1 << '|';
-		for (int j = 0; j < 8; j++) {
-			cout << ' ' << board->getCharAt(i,j) << " |";
+		cout << i + 1 << '|';
+		for (int j = 0; j < board->getSize(); j++) {
+			tile = board->getCharAt(i, j);
+			cout << ' ' << tile << " |";
 		}
 		cout << endl;
 	}
 }
 
-string Console::getInput()
-{
+string Console::getInput() {
 	string s;
-	cin >> s ;
+	cin >> s;
 
 	return s;
 }
 
-void Console::breakLine() const
-{
+void Console::breakLine() const {
 	cout << endl;
 }
 
