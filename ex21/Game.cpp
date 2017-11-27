@@ -8,15 +8,13 @@
 #include "Game.h"
 using namespace std;
 
-
 void Game::addRule(Rule *r) {
 	rules.reserve(1);
 	rules.push_back(r);
 }
 
-Game::Game(int size, PlayerSign sign1, PlayerSign sign2)
-{
-	board = new Board(size,sign1,sign2);
+Game::Game(int size, PlayerSign sign1, PlayerSign sign2) {
+	board = new Board(size, sign1, sign2);
 }
 
 bool Game::validateMove(PlayerSign player, Point move) {
@@ -29,33 +27,72 @@ bool Game::validateMove(PlayerSign player, Point move) {
 	return true;
 }
 
-void Game::updateBoard(Point move, PlayerSign player) {
+int Game::updateBoard(Point move, PlayerSign player) {
+	return updateBoard(move, player, board);
+}
 
+int Game::updateBoard(Point move, PlayerSign player, Board* board,
+		int countOnly) {
 	vector<Point> changes;
 
 	//adds selected tile to the list
 	changes.reserve(1);
-	Point pointer = Point(move.getRow(), move.getCol());
-	changes.push_back(pointer);
+	changes.push_back(move);
 
 	vector<Point> list;
 
 	//get all tiles to change according to all the rules
 	for (std::vector<Rule*>::iterator it = rules.begin(); it != rules.end(); ++it) {
-		list = (*it)->listChanges(player, pointer, getBoard());
-		changes.reserve(list.size());
+		list = (*it)->listChanges(player, move, board);
 		for (std::vector<Point>::iterator it = list.begin(); it != list.end(); ++it) {
-			changes.push_back((*it));
+			//checks if point is not already in changes list
+			if (!pointExist(changes, (*it))) {
+				changes.reserve(1);
+				changes.push_back((*it));
+			}
 		}
 	}
 
-	//change tiles
+	int size = changes.size();
+
+	//if only count is needed
+	if (countOnly)
+		return size;
+
+	//changes tiles
 	for (std::vector<Point>::iterator it = changes.begin(); it != changes.end(); ++it) {
 		board->setTile((*it), player);
 	}
+
+	return size;
+}
+
+bool Game::pointExist(vector<Point> list, Point x) {
+	for (std::vector<Point>::iterator it = list.begin(); it != list.end(); ++it) {
+		if ((*it).equals(x))
+			return true;
+	}
+
+	return false;
+}
+
+bool Game::hasPossibleMoves(PlayerSign player) {
+	for (int i = 0; i < board->getSize(); i++)
+		for (int j = 0; j < board->getSize(); j++) {
+			Point ans = Point(i, j);
+
+			if (validateMove(player, ans)) {
+				return true;
+			}
+		}
+	return false;
 }
 
 vector<Point> Game::getPossibleMoves(PlayerSign player) {
+	return getPossibleMoves(player, board);
+}
+
+vector<Point> Game::getPossibleMoves(PlayerSign player, Board* board) {
 	vector<Point> list;
 
 	for (int i = 0; i < board->getSize(); i++)
@@ -71,19 +108,7 @@ vector<Point> Game::getPossibleMoves(PlayerSign player) {
 	return list;
 }
 
-bool Game::hasPossibleMoves(PlayerSign player) {
-	for (int i = 0; i < board->getSize(); i++)
-		for (int j = 0; j < board->getSize(); j++) {
-			Point ans = Point(i, j);
-
-			if (validateMove(player, ans)) {
-				return true;
-			}
-		}
-	return false;
-}
-
-void Game::notifyWinner(PlayerSign p1, PlayerSign p2) const{
+void Game::notifyWinner(PlayerSign p1, PlayerSign p2) const {
 	int p1Score = 0, p2Score = 0;
 
 	for (int i = 0; i < board->getSize(); i++) {
@@ -96,9 +121,9 @@ void Game::notifyWinner(PlayerSign p1, PlayerSign p2) const{
 	}
 
 	if (p1Score > p2Score)
-		cout << p1<< ": You are the winner." << endl;
+		cout << p1 << ": You are the winner." << endl;
 	else if (p1Score < p2Score)
-		cout << p2<< ": You are the winner." << endl;
+		cout << p2 << ": You are the winner." << endl;
 	else
 		cout << "Draw." << endl;
 }

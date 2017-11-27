@@ -4,7 +4,6 @@
  *  Created on: Nov 4, 2017
  *      Author: zvi liebskind
  */
-#include "PlayerLogic.h"
 #include "Board.h"
 #include "Rule.h"
 #include "FlipRule.h"
@@ -39,10 +38,17 @@ public:
 	 */
 	void addRule(Rule* r);
 	/**
+	 * used to get moves on game's board
 	 * player - the player who should move
 	 * returns - a list of possible points to put disk on
 	 */
 	vector<Point> getPossibleMoves(PlayerSign player);
+	/**
+	 * board - the board to check on
+	 * player - the player who should move
+	 * returns - a list of possible points to put disk on
+	 */
+	vector<Point> getPossibleMoves(PlayerSign player,Board* board);
 	/**
 	 * player - the player who should move
 	 * returns - true if the player has at least one move
@@ -53,10 +59,21 @@ public:
 	 */
 	void notifyWinner(PlayerSign p1, PlayerSign p2) const;
 	/**
+	 * used to update the game's board.
 	 * move - the place to put new disk
 	 * player - the moving player
+	 * return - number of flipped disks
 	 */
-	void updateBoard(Point move, PlayerSign player);
+	int updateBoard(Point move, PlayerSign player);
+	/**
+	 * board - a board to update
+	 * move - the place to put new disk
+	 * player - the moving player
+	 * countOnly - 1 if only a flipping count is needed
+	 * return - number of flipped disks
+	 */
+	int updateBoard(Point move, PlayerSign player, Board* board,
+			int countOnly = 0);
 
 private:
 	Board* board;
@@ -65,6 +82,11 @@ private:
 	 * checks if the wanted move is legal
 	 */
 	bool validateMove(PlayerSign player, Point move);
+	/**
+	 * list - a vector of points
+	 * x - a point to check if exist on the list
+	 */
+	bool pointExist(vector<Point> list, Point x);
 
 };
 

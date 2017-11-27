@@ -30,6 +30,7 @@ public:
 	 */
 	vector<Point>
 	virtual listChanges(PlayerSign player, Point move, Board* board) const=0;
+	virtual ~Rule();
 };
 
 #endif /* RULE_H_ */

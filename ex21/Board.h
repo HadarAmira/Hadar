@@ -22,6 +22,11 @@ public:
 	 */
 	Board(int size, PlayerSign sign1, PlayerSign sign2);
 	/**
+	 * copy constructor
+	 * origin - a board to copy
+	 */
+	Board(Board* origin);
+	/**
 	 * arrange the board to its original shape
 	 */
 	void initialize();
@@ -67,12 +72,11 @@ public:
 	 * origin - the board to duplicate
 	 * return - a copy of origin
 	 */
-	static Board copy(const Board* origin);
 	virtual ~Board();
 private:
 	PlayerSign** board;
 	int size;
-	PlayerSign sign1,sign2;
+	PlayerSign sign1, sign2;
 };
 
 #endif /* BOARD_H_ */

@@ -8,12 +8,25 @@
 #include "Board.h"
 #include <iostream>
 using namespace std;
-Board::Board(int size, PlayerSign sign1, PlayerSign sign2): size(size),sign1(sign1),sign2(sign2) {
+Board::Board(int size, PlayerSign sign1, PlayerSign sign2) :
+	size(size), sign1(sign1), sign2(sign2) {
+	board = new PlayerSign*[size];
+	for (int i = 0; i < size; ++i)
+		board[i] = new PlayerSign[size];
+}
+
+Board::Board(Board *origin) :
+	size(origin->getBoardSize()), sign1(origin->sign1), sign2(origin->sign2) {
+
 	board = new PlayerSign*[size];
 	for (int i = 0; i < size; ++i)
 		board[i] = new PlayerSign[size];
 
-	initialize();
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			setTile(i, j, origin->getCharAt(i, j));
+		}
+	}
 }
 
 int Board::getSize() const {
@@ -43,18 +56,6 @@ void Board::initialize() {
 			}
 		}
 	}
-}
-
-Board Board::copy(const Board *origin) {
-	Board n = Board(origin->getBoardSize(), origin->sign1, origin->sign2);
-
-	for (int i = 0; i < n.size; i++) {
-		for (int j = 0; j < n.size; j++) {
-			n.setTile(i, j, origin->getCharAt(i, j));
-		}
-	}
-
-	return n;
 }
 
 PlayerSign Board::getCharAt(Point & p) const {

@@ -15,7 +15,7 @@ PlayerSign PcPlayer::getSign() const {
 	return sign;
 }
 
-void PcPlayer::playMove(Graphic *g, PlayerLogic *other) {
+void PcPlayer::playMove(Graphic *g, PlayerSign other) {
 
 	// gets possible moves
 	vector<Point> list = game->getPossibleMoves(sign);

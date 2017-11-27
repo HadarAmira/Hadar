@@ -18,7 +18,7 @@ public:
 	 * game - the current game
 	 */
 	PcPlayer(PlayerSign sign, Game* game);
-	void playMove(Graphic *g,PlayerLogic *other);
+	void playMove(Graphic *g,PlayerSign other);
 	PlayerSign getSign() const;
 	bool hasPossibleMove();
 private:

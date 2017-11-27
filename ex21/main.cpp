@@ -10,6 +10,7 @@
 #include "PlayerLogic.h"
 #include "PlayerSign.h"
 #include "PcPlayer.h"
+#include "AIPlayer.h"
 #include "Game.h"
 #include "Rule.h"
 #include "FlipRule.h"
@@ -35,7 +36,7 @@ int main() {
 
 	// create new game
 	/// gets wanted size from user
-	int size = -1;
+	int size = 8;
 	string sizeString;
 	while (size < 6 || size > 100) {
 		sizeString = "Please enter board size (6-100):";
@@ -44,12 +45,12 @@ int main() {
 		string sizeString = console->getInput();
 		size = stringToInt(sizeString);
 	}
-	///creates the game with the player symbols
+	///creates the game with the player symbols and initializes it
 	Game* game = new Game(size, sign1, sign2);
-	//console->printBoard(game->getBoard());
+	game->getBoard()->initialize();
 	// creates the players
 	PlayerLogic* p1 = new PcPlayer(sign1, game);
-	PlayerLogic* p2 = new PcPlayer(sign2, game);
+	PlayerLogic* p2 = new AIPlayer(sign2, game);
 
 	// add rules
 	Rule* flip = new FlipRule();
@@ -64,7 +65,7 @@ int main() {
 		///check if player has moves
 		if (currTurn->hasPossibleMove()) {
 			///play the user's turn
-			currTurn->playMove(console, opp);
+			currTurn->playMove(console, opp->getSign());
 		} else {
 			console->print(currTurn->getSign());
 			string s = ": It's your move.";
@@ -97,6 +98,10 @@ int main() {
 
 }
 
+/**
+ * s - a string to convert to integer
+ * returns parsed int, -1 for wrong input
+ */
 int stringToInt(string s) {
 	int i = 0;
 	for (string::iterator it = s.begin(); it != s.end(); ++it) {

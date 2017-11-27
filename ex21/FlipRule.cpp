@@ -11,6 +11,10 @@ FlipRule::FlipRule(){
 
 }
 
+Rule::~Rule(){
+
+}
+
 bool FlipRule::validate(PlayerSign player, Point move, Board* board) const {
 
 	char sign = player;
