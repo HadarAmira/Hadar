@@ -22,7 +22,8 @@ bool AIPlayer::hasPossibleMove() {
 
 void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
 
-	g->print(sign);
+	// declare turn start
+	g->print((char)sign);
 	string s = ": It's your move.";
 	g->print(s);
 	g->breakLine();
@@ -31,9 +32,8 @@ void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
 	vector<Point> list = game->getPossibleMoves(sign);
 
 	int min = game->getBoard()->getSize() * game->getBoard()->getSize();
-	int idx = -1;
-	int count = 0;
 	int res;
+	Point ans = Point(0,0);
 	// Iterates over possible points and picks best move
 	for (std::vector<Point>::iterator it = list.begin(); it != list.end(); ++it) {
 		//creates a copy of the game board and updates it
@@ -43,14 +43,23 @@ void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
 		res = countFlips(b, p2);
 		if (res < min) {
 			min = res;
-			idx = count;
+			ans = *(it);
 		}
-		count++;
+
 		delete b;
 	}
+	g->breakLine();
+	// declare turn end
+	g->print((char)sign);
+	s = ":";
+	g->print(s);
+	g->printPoint(ans);
+	s = " has been chosen.";
+	g->print(s);
+	g->breakLine();
 
 	//updates the board according to the worst possible opp move
-	game->updateBoard(list[idx], sign);
+	game->updateBoard(ans, sign);
 }
 
 int AIPlayer::countFlips(Board* board, PlayerSign p2) {

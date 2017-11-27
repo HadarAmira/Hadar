@@ -24,6 +24,10 @@ void Console::print(string& s) const {
 	cout << s;
 }
 
+void Console::print(int i) const {
+	cout << i;
+}
+
 void Console::print(char c) const {
 	cout << c;
 }
@@ -56,6 +60,10 @@ void Console::printBoard(Board* board) const {
 		}
 		cout << endl;
 	}
+}
+
+void Console::notifyWinner(PlayerSign w) const {
+	cout << (char)w << ": You are the winner." << endl;
 }
 
 string Console::getInput() {

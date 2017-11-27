@@ -18,6 +18,8 @@ public:
 	virtual void print(string& s) const = 0;
 	virtual void print(char c) const = 0;
 	virtual void print(char* c) const = 0;
+	virtual void print(int i) const = 0;
+	virtual void notifyWinner(PlayerSign w) const = 0;
 	virtual void breakLine() const = 0;
 	virtual string getInput() = 0;
 	virtual ~Graphic();

@@ -12,7 +12,7 @@
 #ifndef CONSOLE_H_
 #define CONSOLE_H_
 
-class Console : public Graphic {
+class Console: public Graphic {
 public:
 	Console();
 	/**
@@ -36,9 +36,17 @@ public:
 	 */
 	void print(char* c) const;
 	/**
+	 * i - an integer to print
+	 */
+	void print(int i) const;
+	/**
 	 * print a line break
 	 */
 	void breakLine() const ;
+	/**
+	 * prints a message to the winner
+	 */
+	void notifyWinner(PlayerSign w) const;
 	/**
 	 * returns user input
 	 */

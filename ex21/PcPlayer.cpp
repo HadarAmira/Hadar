@@ -20,7 +20,7 @@ void PcPlayer::playMove(Graphic *g, PlayerSign other) {
 	// gets possible moves
 	vector<Point> list = game->getPossibleMoves(sign);
 
-	g->print(sign);
+	g->print((char)sign);
 	string s = ": It's your move.";
 	g->print(s);
 	g->breakLine();

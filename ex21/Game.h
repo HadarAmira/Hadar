@@ -48,16 +48,18 @@ public:
 	 * player - the player who should move
 	 * returns - a list of possible points to put disk on
 	 */
-	vector<Point> getPossibleMoves(PlayerSign player,Board* board);
+	vector<Point> getPossibleMoves(PlayerSign player, Board* board);
 	/**
 	 * player - the player who should move
 	 * returns - true if the player has at least one move
 	 */
 	bool hasPossibleMoves(PlayerSign player);
 	/**
-	 * prints winning notification
+	 * p1 - one of the players
+	 * p2 - the second player
+	 * return - (p1 disks)-(p2 disks)
 	 */
-	void notifyWinner(PlayerSign p1, PlayerSign p2) const;
+	int getWinner(PlayerSign p1, PlayerSign p2) const;
 	/**
 	 * used to update the game's board.
 	 * move - the place to put new disk
@@ -79,9 +81,17 @@ private:
 	Board* board;
 	vector<Rule*> rules;
 	/**
-	 * checks if the wanted move is legal
+	 * checks if the wanted move is legal on the game's board
+	 * player - the player who moves
+	 * point - the point to check
 	 */
 	bool validateMove(PlayerSign player, Point move);
+	/**
+	 * player - the player who moves
+	 * point - the point to check
+	 * board - the board to check on
+	 */
+	bool validateMove(PlayerSign player, Point move, Board* board);
 	/**
 	 * list - a vector of points
 	 * x - a point to check if exist on the list

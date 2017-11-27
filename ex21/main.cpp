@@ -36,11 +36,11 @@ int main() {
 
 	// create new game
 	/// gets wanted size from user
-	int size = 8;
-	string sizeString;
+	int size = -1;
+	string s;
 	while (size < 6 || size > 100) {
-		sizeString = "Please enter board size (6-100):";
-		console->print(sizeString);
+		s = "Please enter board size (6-100):";
+		console->print(s);
 		console->breakLine();
 		string sizeString = console->getInput();
 		size = stringToInt(sizeString);
@@ -67,8 +67,8 @@ int main() {
 			///play the user's turn
 			currTurn->playMove(console, opp->getSign());
 		} else {
-			console->print(currTurn->getSign());
-			string s = ": It's your move.";
+			console->print((char) (currTurn->getSign()));
+			s = ": It's your move.";
 			console->print(s);
 			console->breakLine();
 			s
@@ -87,7 +87,16 @@ int main() {
 
 	}
 
-	game->notifyWinner(sign1,sign2);
+	int result = game->getWinner(sign1, sign2);
+	if (result > 0)
+		console->notifyWinner(sign1);
+	else if (result < 0)
+		console->notifyWinner(sign2);
+	else {
+		string s = "Draw.";
+		console->print(s);
+		console->breakLine();
+	}
 
 	//delete
 	delete game;

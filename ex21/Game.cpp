@@ -18,8 +18,12 @@ Game::Game(int size, PlayerSign sign1, PlayerSign sign2) {
 }
 
 bool Game::validateMove(PlayerSign player, Point move) {
+	return validateMove(player, move, getBoard());
+}
+
+bool Game::validateMove(PlayerSign player, Point move, Board* board) {
 	for (std::vector<Rule*>::iterator it = rules.begin(); it != rules.end(); ++it) {
-		if (!(*it)->validate(player, move, getBoard())) {
+		if (!(*it)->validate(player, move, board)) {
 			return false;
 		}
 	}
@@ -99,7 +103,7 @@ vector<Point> Game::getPossibleMoves(PlayerSign player, Board* board) {
 		for (int j = 0; j < board->getSize(); j++) {
 			Point ans = Point(i, j);
 
-			if (validateMove(player, ans)) {
+			if (validateMove(player, ans, board)) {
 				list.reserve(1);
 				Point push = Point(i, j);
 				list.push_back(push);
@@ -108,7 +112,7 @@ vector<Point> Game::getPossibleMoves(PlayerSign player, Board* board) {
 	return list;
 }
 
-void Game::notifyWinner(PlayerSign p1, PlayerSign p2) const {
+int Game::getWinner(PlayerSign p1, PlayerSign p2) const {
 	int p1Score = 0, p2Score = 0;
 
 	for (int i = 0; i < board->getSize(); i++) {
@@ -120,12 +124,7 @@ void Game::notifyWinner(PlayerSign p1, PlayerSign p2) const {
 		}
 	}
 
-	if (p1Score > p2Score)
-		cout << p1 << ": You are the winner." << endl;
-	else if (p1Score < p2Score)
-		cout << p2 << ": You are the winner." << endl;
-	else
-		cout << "Draw." << endl;
+	return p1Score - p2Score;
 }
 
 Board* Game::getBoard() {
