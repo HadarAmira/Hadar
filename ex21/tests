@@ -1,0 +1,98 @@
+//full board (8*8)
+for(int i=0; i<b.getBoardSize(); i++) {
+	for( int j=0; j< b.getBoardSize(); j++ ) {
+		setTile[i][j][x];
+}
+}
+
+//empty board (8*8)
+for(int i=0; i<b.getBoardSize(); i++) {
+	for( int j=0; j< b.getBoardSize(); j++ ) {
+		setTile[i][j][" "];
+}
+}
+
+//full col (8*8)
+// col number 4 if full until (5,4) with x- we will check the (5,5) as possible move
+	for( int j=0; j<6; j++ ) {
+		setTile[j][4][x];
+}
+
+//full row (8*8)
+//row number 4 if full until (4,5) with x - we will check the (4,6) as possible move
+	for( int j=0; j<6; j++ ) {
+		setTile[4][j][x];
+}
+
+//full col with xo pattern (8*8)
+// col number 4 if full until (5,4) with x- we will check the (5,5) as possible move
+	for( int j=0; j<6; j++ ) {
+		if((j+1)<6) {
+		setTile[j][4][x];
+		setTile[j+1][4][o];
+} else {
+	break;
+}
+}
+
+//full  board by x sign (8*8) 
+for(int i=0; i<b.getBoardSize(); i++) {
+	for( int j=0; j< b.getBoardSize(); j++ ) {
+		setTile[i][j][x];
+}
+setTile[ b.getBoardSize()][ b.getBoardSize()][" "];
+}
+
+
+//FlipRule
+TEST(FlipRuleTest, validateMoves) {
+//regular moves
+EXPECT_EQ(validate(x,(3,4),b), TRUE);
+EXPECT_EQ(validate(x,(3,3),b), FALSE);
+EXPECT_EQ(validate(o,(5,3),b), TRUE);
+EXPECT_EQ(validate(o,(5,6),b), FALSE);
+//border
+EXPECT_EQ(validate(x,(0,5),b), FALSE);
+EXPECT_EQ(validate(o,(7,0),b), FALSE);
+//corners
+EXPECT_EQ(validate(x,(0,0),b), FALSE);
+EXPECT_EQ(validate(o,(9,9),b), FALSE);
+// sequence xx
+EXPECT_EQ(validate(o,(5,5)),b), FALSE);
+EXPECT_EQ(validate(o,(4,6),b), FALSE);
+// sequence xo
+EXPECT_EQ(validate(o,(5,5)),b), FALSE);
+EXPECT_EQ(validate(o,(4,6),b), FALSE);
+
+}
+
+//FlipRule
+TEST(FlipRuleTest, listchangeMoves) {
+EXPECT_EQ(listChanges(x, (2,2), b), changes.empty()==TRUE);
+
+}
+//Game test
+TEST(GameTest, getPossibleMoves) {
+//full
+EXPECT_EQ(getPossibleMoves(x), possibleMoves.empty()==TRUE );
+//empty
+EXPECT_EQ(getPossibleMoves(x),  possibleMoves.empty()==TRUE );
+}
+
+TEST(GameTest,PointExist) {
+EXPECT_EQ(pointExist(list, (5,6)), TRUE );
+EXPECT_EQ(pointExist(list, (2,2)), FALSE);
+}
+
+TEST(GameTest, hasPossibleMoves) {
+//possible move when board is full || possible move when board is empty || the game is over for one player
+EXPECT_EQ(hasPossibleMoves(o), FALSE );
+}
+
+TEST(GameTest, validateMove) {
+EXPECT_EQ(validateMove(x,(3,4)), TRUE);
+EXPECT_EQ(validateMove(o, (5,6)), FALSE);
+}
+
+
+
