@@ -8,13 +8,17 @@
 #include "Game.h"
 using namespace std;
 
+Game::Game(int size, PlayerSign sign1, PlayerSign sign2) {
+	board = new Board(size, sign1, sign2);
+}
+
+Game::~Game() {
+	delete board;
+}
+
 void Game::addRule(Rule *r) {
 	rules.reserve(1);
 	rules.push_back(r);
-}
-
-Game::Game(int size, PlayerSign sign1, PlayerSign sign2) {
-	board = new Board(size, sign1, sign2);
 }
 
 bool Game::validateMove(PlayerSign player, Point move) {

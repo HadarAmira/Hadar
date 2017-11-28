@@ -31,8 +31,8 @@ int main() {
 	Graphic* console = new Console();
 
 	//generates the signs of the players
-	PlayerSign sign1 = O;
-	PlayerSign sign2 = X;
+	PlayerSign sign1 = X;
+	PlayerSign sign2 = O;
 
 	// create new game
 	/// gets wanted size from user
@@ -45,12 +45,36 @@ int main() {
 		string sizeString = console->getInput();
 		size = stringToInt(sizeString);
 	}
+
 	///creates the game with the player symbols and initializes it
 	Game* game = new Game(size, sign1, sign2);
 	game->getBoard()->initialize();
+
+	//let user choose opponent
+	size=-1;
+	while(size<0 || size>2){
+		s = "Choose opponent:";
+			console->print(s);
+			console->breakLine();
+			s= "1. A local player";
+			console->print(s);
+			console->breakLine();
+			s= "2. AI Player";
+			console->print(s);
+			console->breakLine();
+			string sizeString = console->getInput();
+			size = stringToInt(sizeString);
+	}
+
 	// creates the players
 	PlayerLogic* p1 = new PcPlayer(sign1, game);
-	PlayerLogic* p2 = new AIPlayer(sign2, game);
+	PlayerLogic* p2;
+	if(size==1)
+		p2 = new PcPlayer(sign2, game);
+	else
+		p2 = new AIPlayer(sign2, game);
+
+
 
 	// add rules
 	Rule* flip = new FlipRule();
@@ -86,6 +110,9 @@ int main() {
 		}
 
 	}
+
+	//prints final board
+	console->printBoard(game->getBoard());
 
 	int result = game->getWinner(sign1, sign2);
 	if (result > 0)

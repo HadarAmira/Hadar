@@ -24,6 +24,7 @@ public:
 	 * p2 - the second player
 	 */
 	Game(int size, PlayerSign p1, PlayerSign p2);
+	~Game();
 	/**
 	 * creates a new game
 	 * the game's board
