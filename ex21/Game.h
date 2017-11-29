@@ -25,11 +25,6 @@ public:
 	 */
 	Game(int size, PlayerSign p1, PlayerSign p2);
 	~Game();
-	/**
-	 * creates a new game
-	 * the game's board
-	 */
-	Game(Board board);
 	/*
 	 * returns - the game board
 	 */
@@ -96,6 +91,7 @@ private:
 	/**
 	 * list - a vector of points
 	 * x - a point to check if exist on the list
+	 * returns - true if x is already in list
 	 */
 	bool pointExist(vector<Point> list, Point x);
 

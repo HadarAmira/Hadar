@@ -10,6 +10,9 @@
 PcPlayer::PcPlayer(PlayerSign sign, Game* game) :
 	sign(sign), game(game) {
 }
+PcPlayer::~PcPlayer(){
+
+}
 
 PlayerSign PcPlayer::getSign() const {
 	return sign;

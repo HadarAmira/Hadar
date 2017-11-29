@@ -16,7 +16,7 @@ Board::Board(int size, PlayerSign sign1, PlayerSign sign2) :
 }
 
 Board::Board(Board *origin) :
-	size(origin->getBoardSize()), sign1(origin->sign1), sign2(origin->sign2) {
+	size(origin->getSize()), sign1(origin->sign1), sign2(origin->sign2) {
 
 	board = new PlayerSign*[size];
 	for (int i = 0; i < size; ++i)
@@ -30,10 +30,6 @@ Board::Board(Board *origin) :
 }
 
 int Board::getSize() const {
-	return size;
-}
-
-int Board::getBoardSize() const {
 	return size;
 }
 
@@ -66,18 +62,8 @@ void Board::setTile(int row, int col, PlayerSign player) {
 	board[row][col] = player;
 }
 
-PlayerSign Board::getCharAt(Point *p) const {
-	return board[p->getRow()][p->getCol()];
-}
-
 void Board::setTile(Point & move, PlayerSign player) {
 	board[move.getRow()][move.getCol()] = player;
-}
-
-bool Board::boarderlines(int i, int j) {
-	return (1 > i || i > this->getBoardSize() - 1) || (1 > j || j
-			> this->getBoardSize() - 1);
-
 }
 
 Board::~Board() {

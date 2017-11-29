@@ -9,8 +9,8 @@
 #define PLAYERSIGN_H_
 
 /**
- * supported board size
+ * on board signs
  */
 enum PlayerSign {X=88,O=79,_=32};
 
-#endif /* BOARDSIZE_H_ */
+#endif /* PLAYERSIGN_H_ */

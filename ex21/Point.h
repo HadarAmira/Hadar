@@ -14,7 +14,7 @@ class Point {
 public:
 	/**
 	 * creates a new point
-	 * row - y axis loation
+	 * row - y axis location
 	 * col - x axis location
 	 */
 	Point(int row, int col);
@@ -35,7 +35,7 @@ public:
 	 */
 	void setRow(int row);
 	/**
-	 * returns - true if the point are equivalent
+	 * returns - true if the points are equivalent
 	 */
 	bool equals(Point o) const;
 	/**

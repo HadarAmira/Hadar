@@ -14,6 +14,11 @@
 class AIPlayer: public PlayerLogic {
 
 public:
+	/**
+	 * creates a new AI player
+	 * sign - the the sign of the player
+	 * game - the current game
+	 */
 	AIPlayer(PlayerSign sign, Game* game);
 	void playMove(Graphic *g,PlayerSign p2);
 	PlayerSign getSign() const;

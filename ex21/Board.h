@@ -27,17 +27,13 @@ public:
 	 */
 	Board(Board* origin);
 	/**
-	 * arrange the board to its original shape
+	 * arrange the board to its starting shape
 	 */
 	void initialize();
 	/**
 	 * returns the size of the board
 	 */
 	int getSize() const;
-	/**
-	 * returns the BoardSize enum
-	 */
-	int getBoardSize() const;
 	/**
 	 * returns the char at the wanted point
 	 */
@@ -47,12 +43,8 @@ public:
 	 */
 	PlayerSign getCharAt(Point& p) const;
 	/**
-	 * returns the char at the wanted point
-	 */
-	PlayerSign getCharAt(Point* p) const;
-	/**
 	 * move - a point to change
-	 * player - the char to change to
+	 * player - the sign to change to
 	 */
 	void setTile(Point& move, PlayerSign player);
 	/**
@@ -61,17 +53,6 @@ public:
 	 * player - the sign to change to
 	 */
 	void setTile(int row, int col, PlayerSign player);
-	/**
-	 * this method checks the board lines and return true if it is the end of the board.
-	 * @param i - row.
-	 * @param j - column.
-	 * @return true/false.
-	 */
-	bool boarderlines(int i, int j);
-	/**
-	 * origin - the board to duplicate
-	 * return - a copy of origin
-	 */
 	virtual ~Board();
 private:
 	PlayerSign** board;

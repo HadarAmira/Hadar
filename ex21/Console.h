@@ -20,7 +20,7 @@ public:
 	 */
 	void printBoard(Board* board) const;
 	/**
-	 * p - a poin to print
+	 * p - a point to print
 	 */
 	void printPoint(Point p) const;
 	/**
