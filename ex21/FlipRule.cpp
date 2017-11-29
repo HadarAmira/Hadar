@@ -20,7 +20,7 @@ bool FlipRule::validate(PlayerSign player, Point move, Board* board) const {
 	int col = move.getCol();
 	int row = move.getRow();
 
-	PlayerSign empty = _;
+	PlayerSign empty = Z;
 	PlayerSign opp = player == X ? O : X;
 
 	if (board->getCharAt(move) != empty)
@@ -120,7 +120,7 @@ vector<Point> FlipRule::listChanges(PlayerSign player, Point move, Board *board)
 	int row = move.getRow();
 	int col = move.getCol();
 
-	PlayerSign empty = _;
+	PlayerSign empty = Z;
 	PlayerSign opp = player == X ? O : X;
 
 	// check row left
@@ -202,7 +202,7 @@ vector<Point> FlipRule::listChanges(PlayerSign player, Point move, Board *board)
 
 	// check diagonal up right
 	if (row > 1 && col < board->getSize() - 1 && board->getCharAt(row - 1,
-			col + 1) ==opp) {
+			col + 1) == opp) {
 		int j = col + 2;
 		for (int i = row - 2; i >= 0 && j < board->getSize(); i--, j++) {
 			if (board->getCharAt(i, j) == player) {
@@ -221,7 +221,7 @@ vector<Point> FlipRule::listChanges(PlayerSign player, Point move, Board *board)
 
 	// check diagonal down right
 	if (row < board->getSize() - 1 && col < board->getSize() - 1
-			&& board->getCharAt(row + 1, col + 1) ==opp) {
+			&& board->getCharAt(row + 1, col + 1) == opp) {
 		int j = col + 2;
 		for (int i = row + 2; i < board->getSize() && j < board->getSize(); i++, j++) {
 			if (board->getCharAt(i, j) == player) {
@@ -241,7 +241,7 @@ vector<Point> FlipRule::listChanges(PlayerSign player, Point move, Board *board)
 
 	// check diagonal down left
 	if (row < board->getSize() - 1 && col > 1 && board->getCharAt(row + 1,
-			col - 1) ==opp) {
+			col - 1) == opp) {
 		int j = col - 2;
 		for (int i = row + 2; i < board->getSize() && j >= 0; i++, j--) {
 			if (board->getCharAt(i, j) == player) {

@@ -11,6 +11,6 @@
 /**
  * on board signs
  */
-enum PlayerSign {X=88,O=79,_=32};
+enum PlayerSign {X=88,O=79,Z=32};
 
 #endif /* PLAYERSIGN_H_ */

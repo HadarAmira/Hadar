@@ -47,7 +47,7 @@ void Board::initialize() {
 					&& j == (size / 2) - 1)) {
 				board[i][j] = sign2;
 			} else {
-				PlayerSign s = _;
+				PlayerSign s = Z;
 				board[i][j] = s;
 			}
 		}

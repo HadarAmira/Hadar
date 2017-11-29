@@ -51,30 +51,28 @@ int main() {
 	game->getBoard()->initialize();
 
 	//let user choose opponent
-	size=-1;
-	while(size<0 || size>2){
+	size = -1;
+	while (size < 0 || size > 2) {
 		s = "Choose opponent:";
-			console->print(s);
-			console->breakLine();
-			s= "1. A local player";
-			console->print(s);
-			console->breakLine();
-			s= "2. AI Player";
-			console->print(s);
-			console->breakLine();
-			string sizeString = console->getInput();
-			size = stringToInt(sizeString);
+		console->print(s);
+		console->breakLine();
+		s = "1. A local player";
+		console->print(s);
+		console->breakLine();
+		s = "2. AI Player";
+		console->print(s);
+		console->breakLine();
+		string sizeString = console->getInput();
+		size = stringToInt(sizeString);
 	}
 
 	// creates the players
 	PlayerLogic* p1 = new PcPlayer(sign1, game);
-	PlayerLogic* p2;
-	if(size==1)
+	PlayerLogic * p2;
+	if (size == 1)
 		p2 = new PcPlayer(sign2, game);
 	else
 		p2 = new AIPlayer(sign2, game);
-
-
 
 	// add rules
 	Rule* flip = new FlipRule();
