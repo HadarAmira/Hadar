@@ -19,12 +19,14 @@ public:
 	 */
 	PcPlayer(PlayerSign sign, Game* game);
 	~PcPlayer();
-	void playMove(Graphic *g,PlayerSign other);
+	void playMove(Graphic *g,PlayerLogic* other);
 	PlayerSign getSign() const;
 	bool hasPossibleMove();
+	void notifyMove(Point p) const;
 private:
 	PlayerSign sign;
 	Game* game;
+
 };
 
 #endif /* PCPLAYER_H_ */

@@ -18,7 +18,7 @@ PlayerSign PcPlayer::getSign() const {
 	return sign;
 }
 
-void PcPlayer::playMove(Graphic *g, PlayerSign other) {
+void PcPlayer::playMove(Graphic *g, PlayerLogic* other) {
 
 	// gets possible moves
 	vector<Point> list = game->getPossibleMoves(sign);
@@ -68,8 +68,16 @@ void PcPlayer::playMove(Graphic *g, PlayerSign other) {
 
 	//updates the board according to the pick
 	game->updateBoard(ans, sign);
+
+	// notifies the other player of the selection
+	other->notifyMove(ans);
 }
 
 bool PcPlayer::hasPossibleMove(){
 	return game->hasPossibleMoves(sign);
+}
+
+
+void PcPlayer::notifyMove(Point p) const{
+
 }

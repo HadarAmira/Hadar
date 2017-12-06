@@ -20,7 +20,7 @@ bool AIPlayer::hasPossibleMove() {
 	return game->hasPossibleMoves(sign);
 }
 
-void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
+void AIPlayer::playMove(Graphic *g, PlayerLogic* p2) {
 
 	// declare turn start
 	g->print((char)sign);
@@ -40,7 +40,7 @@ void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
 		Board* b = new Board(game->getBoard());
 		game->updateBoard(*(it), getSign(), b);
 		//gets best move for the opponent
-		res = countFlips(b, p2);
+		res = countFlips(b, p2->getSign());
 		if (res < min) {
 			min = res;
 			ans = *(it);
@@ -60,6 +60,10 @@ void AIPlayer::playMove(Graphic *g, PlayerSign p2) {
 
 	//updates the board according to the worst possible opp move
 	game->updateBoard(ans, sign);
+
+
+	// notifies the other player of the selection
+	p2->notifyMove(ans);
 }
 
 int AIPlayer::countFlips(Board* board, PlayerSign p2) {
@@ -82,5 +86,9 @@ int AIPlayer::countFlips(Board* board, PlayerSign p2) {
 
 PlayerSign AIPlayer::getSign() const {
 	return sign;
+}
+
+void AIPlayer::notifyMove(Point p) const{
+
 }
 

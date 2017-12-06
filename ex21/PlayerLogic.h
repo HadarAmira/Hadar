@@ -21,7 +21,7 @@ public:
 	 * g - used graphic
 	 * other - the competitor
 	 */
-	virtual void playMove(Graphic *g,PlayerSign p2) = 0;
+	virtual void playMove(Graphic *g,PlayerLogic* p2) = 0;
 	/**
 	 * returns - the sign of this player
 	 */
@@ -30,6 +30,10 @@ public:
 	 * returns true if the player has at least one possible move
 	 */
 	virtual bool hasPossibleMove() =0;
+	/**
+	 * p - the other player's chosen move
+	 */
+	virtual void notifyMove(Point p) const = 0;
 	virtual ~PlayerLogic();
 };
 

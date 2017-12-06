@@ -20,9 +20,10 @@ public:
 	 * game - the current game
 	 */
 	AIPlayer(PlayerSign sign, Game* game);
-	void playMove(Graphic *g,PlayerSign p2);
+	void playMove(Graphic *g,PlayerLogic* p2);
 	PlayerSign getSign() const;
 	bool hasPossibleMove();
+	void notifyMove(Point p) const;
 private:
 	PlayerSign sign;
 	Game* game;

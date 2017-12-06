@@ -9,6 +9,7 @@
 #include "Board.h"
 #include "PlayerLogic.h"
 #include "PlayerSign.h"
+#include "ClientPlayer.h"
 #include "PcPlayer.h"
 #include "AIPlayer.h"
 #include "Game.h"
@@ -52,7 +53,7 @@ int main() {
 
 	//let user choose opponent
 	size = -1;
-	while (size < 0 || size > 2) {
+	while (size < 0 || size > 3) {
 		s = "Choose opponent:";
 		console->print(s);
 		console->breakLine();
@@ -62,24 +63,42 @@ int main() {
 		s = "2. AI Player";
 		console->print(s);
 		console->breakLine();
+		s = "3. A remote Player";
+		console->print(s);
+		console->breakLine();
 		string sizeString = console->getInput();
 		size = stringToInt(sizeString);
 	}
 
 	// creates the players
-	PlayerLogic* p1 = new PcPlayer(sign1, game);
+	PlayerLogic * p1;
 	PlayerLogic * p2;
-	if (size == 1)
-		p2 = new PcPlayer(sign2, game);
-	else
-		p2 = new AIPlayer(sign2, game);
+	if (size == 3) {
+		p2 = new ClientPlayer(game, console);
+		if (p2->getSign() == X)
+			p1 = new PcPlayer(O, game);
+		else
+			p1 = new PcPlayer(X, game);
+	} else if (size == 1)
+		p2 = new PcPlayer(O, game);
+	else if (size == 2)
+		p2 = new AIPlayer(O, game);
+	if (size != 3)
+		p1 = new PcPlayer(X, game);
 
 	// add rules
 	Rule* flip = new FlipRule();
 	game->addRule(flip);
 
-	PlayerLogic* currTurn = p1;
-	PlayerLogic* opp = p2;
+	PlayerLogic* currTurn;
+	PlayerLogic* opp;
+	if (p1->getSign() == X) {
+		currTurn = p1;
+		opp = p2;
+	} else {
+		currTurn = p2;
+		opp = p1;
+	}
 	// while any player has a move
 	while (p1->hasPossibleMove() || p2->hasPossibleMove()) {
 		//print board
@@ -87,7 +106,7 @@ int main() {
 		///check if player has moves
 		if (currTurn->hasPossibleMove()) {
 			///play the user's turn
-			currTurn->playMove(console, opp->getSign());
+			currTurn->playMove(console, opp);
 		} else {
 			console->print((char) (currTurn->getSign()));
 			s = ": It's your move.";
@@ -97,6 +116,8 @@ int main() {
 					= "No possible moves. Player passes back to the other player. Press any key to continue";
 			console->print(s);
 			console->getInput();
+			// notifies other player of the NoMove situation
+			opp->notifyMove(Point(-1,-1));
 		}
 		///switch turn
 		if (currTurn == p1) {
@@ -108,6 +129,9 @@ int main() {
 		}
 
 	}
+	//notify players of game end
+	p1->notifyMove(Point(-2,-1));
+	p2->notifyMove(Point(-2,-1));
 
 	//prints final board
 	console->printBoard(game->getBoard());
