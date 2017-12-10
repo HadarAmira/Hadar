@@ -1,8 +1,6 @@
 /*
  * main.cpp
  *
- *  Created on: Dec 5, 2017
- *      Author: zvi
  */
 
 #include "Server.h"
@@ -10,7 +8,7 @@
 #include <stdlib.h>
 using namespace std;
 int main() {
-	Server server("/home/hadar/Documents/Reversi/exe/serverSettings");
+	Server server("serverSettings");
 	try {
 		server.start();
 	} catch (const char *msg) {
