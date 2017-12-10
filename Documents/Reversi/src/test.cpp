@@ -4,11 +4,11 @@
 #include <iostream>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "../src/Board.h"
-#include "../src/FlipRule.h"
-#include "../src/PlayerSign.h"
-#include "../src/Console.h"
-#include "../src/Game.h"
+#include "client/Board.h"
+#include "client/FlipRule.h"
+#include "client/PlayerSign.h"
+#include "client/Console.h"
+#include "client/Game.h"
 
 #define TEST_BOARD_SIZE 8
 
