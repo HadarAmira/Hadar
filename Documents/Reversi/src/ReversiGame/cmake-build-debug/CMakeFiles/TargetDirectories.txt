@@ -1,0 +1,3 @@
+/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/CMakeFiles/ReversiGame.dir

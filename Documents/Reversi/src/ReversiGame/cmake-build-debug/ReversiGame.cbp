@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ReversiGame"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReversiGame">
+				<Option output="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/ReversiGame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReversiGame"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReversiGame/fast">
+				<Option output="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/ReversiGame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReversiGame/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/hadar/Documents/Reversi/src/ReversiGame/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/AIPlayer.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/AIPlayer.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Board.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Board.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/BoardSize.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Client.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Client.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/ClientPlayer.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/ClientPlayer.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Console.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Console.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/FlipRule.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/FlipRule.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Game.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Game.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Graphic.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/PcPlayer.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/PcPlayer.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/PlayerLogic.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/PlayerSign.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Point.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Point.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/Rule.h">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/main.cpp">
+			<Option target="ReversiGame"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/ReversiGame/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
