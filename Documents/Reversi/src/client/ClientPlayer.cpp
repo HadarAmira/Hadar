@@ -5,12 +5,53 @@
 
 #include "ClientPlayer.h"
 #include <string.h>
+#include <sstream>
+#include <iostream>
 
 ClientPlayer::ClientPlayer(Game* game, Graphic* g) :
 		game(game), client("settings.txt") {
 
-
 	client.connectToServer();
+	int res=0;
+	string m, m1, m2;
+	while(!res){
+	m = "Welcome, please choose an option: ";
+	g->print(m);
+	g->breakLine();
+	m = "1 - start <name>";
+	g->print(m);
+	g->breakLine();
+	m = "2 - join <name>";
+	g->print(m);
+	g->breakLine();
+	m = "3 - list-games";
+	g->print(m);
+	g->breakLine();
+
+	cin>>m;
+	istringstream iss(m);
+	iss >> m1;   //message
+	iss >> m2;   //name
+
+	if (m1.compare("start")) {
+		res=1;
+	} else if (m1.compare("join")) {
+		res=2;
+	} else if (m1.compare("list-games")) {
+		client.sendMove(3);
+		int games= client.getInt();
+
+		for (int i=0; i<games; i++ ) {
+			g->print(client.getString());
+			g->breakLine();
+		}
+		client.connectToServer();
+
+	}
+	}
+
+	client.sendMove(res);
+
 
 	Point message = client.getMove();
 	string s;

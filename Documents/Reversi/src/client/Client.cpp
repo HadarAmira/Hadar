@@ -86,6 +86,21 @@ void Client::sendMove(Point move) const{
 
 
 }
+void Client::sendMove(int x) const {
+	int n;
+	n = write(clientSocket, &x, sizeof(x));
+	if (n == -1 ) {
+		throw "Error writing move to socket";
+	}
+}
+void Client::sendMove(char* x) const {
+	int n;
+	n = write(clientSocket, &x, sizeof(x));
+	if (n == -1) {
+		throw "Error writing move to socket";
+
+	}
+}
 
 Point Client::getMove(){
 
@@ -100,6 +115,25 @@ Point Client::getMove(){
 
 	return Point(x,y);
 }
+
+int Client::getInt() {
+	int x,n;
+	n = write(clientSocket, &x, sizeof(x));
+	if (n == -1 ) {
+		throw "Error writing move to socket";
+	}
+	return x;
+}
+char* Client::getString(){
+	int n;
+	char x[50];
+	n = write(clientSocket, &x, sizeof(x));
+	if (n == -1 ) {
+		throw "Error writing move to socket";
+	}
+	return x;
+}
+
 Client::~Client() {
     delete[](serverIP);
 }

@@ -18,6 +18,10 @@ public:
 	Client(const char* file);
 	void connectToServer();
 	void sendMove(Point move) const;
+	void sendMove(int x) const;
+	void sendMove(char* x) const;
+	int getInt();
+	char* getString();
 	Point getMove();
 private:
 	char* serverIP;

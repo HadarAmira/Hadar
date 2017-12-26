@@ -1,3 +1,15 @@
+commit 8fb94ea1c0011aac52496612dca64160740fc52a
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Sun Dec 10 20:18:51 2017 +0200
+
+    ex4
+
+commit e8f2ed80f7eb95c705926e83bce2d42f1e9ccd6d
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Sun Dec 10 18:57:50 2017 +0200
+
+    ex4
+
 commit 8b1b6fe5179ba4869b655222ea967a3d27d02705
 Author: HadarAmira <hadaramira82@gmail.com>
 Date:   Sun Dec 10 18:28:44 2017 +0200
