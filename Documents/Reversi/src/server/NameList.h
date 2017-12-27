@@ -3,8 +3,6 @@
 #ifndef REVERSI_NAMELIST_H
 #define REVERSI_NAMELIST_H
 
-
-#include <zconf.h>
 #include "Command.h"
 
 
