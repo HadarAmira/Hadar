@@ -13,6 +13,9 @@
 class Executer {
 public:
 	virtual ~Executer();
+	/**
+	 * static method to access command manager.
+	 */
 	static void* run(void* det);
 private:
 	Executer();

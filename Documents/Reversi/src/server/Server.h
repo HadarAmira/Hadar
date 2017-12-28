@@ -17,7 +17,6 @@ public:
 private:
 	int port;
 	int serverSocket; // the socket's file descriptor
-	void handleClient(int client1, int client2);
 	CommandManager cm;
 };
 #endif /* SERVER_H_ */

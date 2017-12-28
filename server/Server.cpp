@@ -6,16 +6,13 @@
  */
 
 #include "Server.h"
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
 #include <iostream>
 #include <stdio.h>
-#include <string.h>
 #include <fstream>
+#include <string.h>
 
 using namespace std;
-#define MAX_CONNECTED_CLIENTS 10
+#define MAX_CONNECTED_CLIENTS 1000
 Server::Server(int port) :
 	port(port), serverSocket(0) {
 	cm = CommandManager();
@@ -49,22 +46,24 @@ void Server::start() {
 	}
 	// Start listening to incoming connections
 	listen(serverSocket, MAX_CONNECTED_CLIENTS);
+	cout << "Server is listening..." << endl;
 	// Define the client socket's structures
 	struct sockaddr_in clientAddress;
 	socklen_t clientAddressLen;
 	long client;
-	pthread_t thread;
 	while (true) {
+		pthread_t thread;
 		//create new connection details for each client
-		connDet connDetail;
-		connDetail.cm = cm;
-		cout << "Waiting for client connections..." << endl;
+		connDet* connDetail = new connDet;
+		connDetail->cm = &cm;
 		// Accept a new client connection
 		client = accept(serverSocket, (struct sockaddr *) &clientAddress,
 				&clientAddressLen);
-		connDetail.client = client;
+
+		cout << "Client "<< client << " Connected." << endl;
+		connDetail->client = client;
 		//handle command on different thread
-		pthread_create(&thread, NULL, Executer::run, (void*) client);
+		pthread_create(&thread, NULL, Executer::run, (void*) connDetail);
 	}
 
 }

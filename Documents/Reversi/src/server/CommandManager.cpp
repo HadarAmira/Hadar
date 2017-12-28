@@ -13,22 +13,26 @@
 #define LIST 3
 
 CommandManager::CommandManager() {
-	pthread_mutex_t mutex;
+	pthread_mutex_init(&mutex,0);
+	games = GamesManager();
 	commandsMap[START] = new StartGame(&games,&mutex);
 	commandsMap[JOIN] = new JoinGame(&games,&mutex);
 	commandsMap[LIST] = new NameList(&games,&mutex);
 
 }
-void CommandManager::executeCommand(int destination) {
+
+void CommandManager::executeCommand(int client) {
 	int option;
-	read(destination, &option, sizeof(option));
+	read(client, &option, sizeof(option));
 	Command *commandObj = commandsMap[option];
-	commandObj->execute(destination);
+	commandObj->execute(client);
 }
 CommandManager::~CommandManager() {
 	map<int, Command *>::iterator it;
 	for (it = commandsMap.begin(); it != commandsMap.end(); it++) {
 		delete it->second;
 	}
+
+	pthread_mutex_destroy(&mutex);
 }
 

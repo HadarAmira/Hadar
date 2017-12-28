@@ -5,12 +5,10 @@
  *      Author: zvi
  */
 
-#include <map>
-#include <string>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
+#include "GamesManager.h"
+#include "StringHandler.h"
 #include <pthread.h>
+#include <iostream>
 using namespace std;
 
 #ifndef COMMAND_H_
@@ -18,7 +16,7 @@ using namespace std;
 
 class Command {
 public:
- virtual void execute(int destination) = 0;
+ virtual void execute(int client) = 0;
  virtual ~Command() {}
 };
 
