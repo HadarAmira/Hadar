@@ -9,7 +9,7 @@ using namespace std;
 static void* start(void* server);
 
 int main() {
-	Server server("/home/hadar/Documents/Reversi/exe/serverSettings");
+	Server server("serverSettings");
 
 	cout << "Enter exit to stop server" << endl;
 
