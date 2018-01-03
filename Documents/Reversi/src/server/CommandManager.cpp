@@ -27,6 +27,7 @@ void CommandManager::executeCommand(int client) {
 	Command *commandObj = commandsMap[option];
 	commandObj->execute(client);
 }
+
 CommandManager::~CommandManager() {
 	map<int, Command *>::iterator it;
 	for (it = commandsMap.begin(); it != commandsMap.end(); it++) {

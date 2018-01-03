@@ -13,6 +13,9 @@
 #include <unistd.h>
 #include <libio.h>
 #include <fstream>
+#include <stdlib.h>
+
+#define SERVER_CLOSED -5
 
 using namespace std;
 
@@ -106,7 +109,15 @@ Point Client::getMove() {
 	int n, n2;
 	int x, y;
 	n = read(clientSocket, &x, sizeof(x));
+	if (x == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	n2 = read(clientSocket, &y, sizeof(y));
+	if (y == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	if (n == -1 || n2 == -1) {
 		throw "Error reading move from socket";
 	}
@@ -117,6 +128,10 @@ Point Client::getMove() {
 int Client::getInt() {
 	int x, n;
 	n = read(clientSocket, &x, sizeof(x));
+	if (x == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	if (n == -1) {
 		throw "Error writing move to socket";
 	}
@@ -127,6 +142,10 @@ void Client::getString(int length, char *dest) {
 	char c;
 	for (int i = 0; i < length; i++) {
 		read(clientSocket, &sym, sizeof(sym));
+		if (sym == SERVER_CLOSED) {
+			cout << "Server Closed." << endl;
+			exit(-1);
+		}
 		c = (char) sym;
 		dest[i] = c;
 	}

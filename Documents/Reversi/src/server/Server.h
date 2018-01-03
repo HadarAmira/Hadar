@@ -14,6 +14,7 @@ private:
 	int port;
 	int serverSocket; // the socket's file descriptor
 	CommandManager cm;
+	int min,max;
 
 };
 #endif /* SERVER_H_ */
