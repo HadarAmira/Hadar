@@ -51,18 +51,13 @@ void Server::start() {
 	struct sockaddr_in clientAddress;
 	socklen_t clientAddressLen;
 	long client;
-<<<<<<< HEAD
 	while (client!=-1) {
-=======
-	while (true) {
->>>>>>> 552efa29b9603f491953c7bc9dc155b438cf0de8
 		pthread_t thread;
 		//create new connection details for each client
 		connDet* connDetail = new connDet;
 		connDetail->cm = &cm;
 		// Accept a new client connection
 		client = accept(serverSocket, (struct sockaddr *) &clientAddress,
-<<<<<<< HEAD
 						&clientAddressLen);
 		if(client!=-1) {
 			cout << "Client " << client << " Connected." << endl;
@@ -70,14 +65,6 @@ void Server::start() {
 			//handle command on different thread
 			pthread_create(&thread, NULL, Executer::run, (void *) connDetail);
 		}
-=======
-				&clientAddressLen);
-
-		cout << "Client "<< client << " Connected." << endl;
-		connDetail->client = client;
-		//handle command on different thread
-		pthread_create(&thread, NULL, Executer::run, (void*) connDetail);
->>>>>>> 552efa29b9603f491953c7bc9dc155b438cf0de8
 	}
 
 }
