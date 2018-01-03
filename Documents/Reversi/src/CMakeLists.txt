@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(src)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS -pthread)
 add_subdirectory(lib/googletest-release-1.8.0)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 include_directories(${gmock_SOURCE_DIR}/include ${gmock_SOURCE_DIR})
@@ -33,7 +34,10 @@ set(CLIENT_SOURCE_FILES
 set(SERVER_SOURCE_FILES
         server/main.cpp
         server/Server.cpp
-        server/Server.h)
+        server/Server.h
+        )
+file(GLOB SERVER_SOURCE_FILES ${src_SOURCE_DIR}/server/*.cpp)
+
 set(TEST_SOURCE_FILES
         test/gtest_main.cpp
         test/test.cpp

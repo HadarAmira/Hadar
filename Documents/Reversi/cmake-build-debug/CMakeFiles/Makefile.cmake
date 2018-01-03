@@ -11,6 +11,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeSystem.cmake"
+  "../src/CMakeLists.txt"
+  "../src/lib/googletest-release-1.8.0/CMakeLists.txt"
+  "../src/lib/googletest-release-1.8.0/googlemock/CMakeLists.txt"
+  "../src/lib/googletest-release-1.8.0/googletest/CMakeLists.txt"
+  "../src/lib/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCInformation.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXInformation.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCommonLanguageInclude.cmake"
@@ -20,9 +25,16 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeLanguageInformation.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckIncludeFile.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckLibraryExists.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckSymbolExists.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU-C.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU-CXX.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPackageMessage.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPythonInterp.cmake"
+  "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindThreads.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-C.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/hadar/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU.cmake"
@@ -40,9 +52,19 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/lib/googletest-release-1.8.0/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Reversi.dir/DependInfo.cmake"
+  "src/CMakeFiles/maintesting.dir/DependInfo.cmake"
+  "src/CMakeFiles/server.dir/DependInfo.cmake"
+  "src/CMakeFiles/client.dir/DependInfo.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "src/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )

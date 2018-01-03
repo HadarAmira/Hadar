@@ -13,7 +13,11 @@
 class Executer {
 public:
 	virtual ~Executer();
+	/**
+	 * static method to access command manager.
+	 */
 	static void* run(void* det);
+	static void* start(void* stop);
 private:
 	Executer();
 };

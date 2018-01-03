@@ -1,21 +1,25 @@
-
-
 #include <iostream>
+#include <vector>
 #include "NameList.h"
 
-
-NameList::NameList(map<string, int>* games, pthread_mutex_t* mutex) :
-        games(games), mutex(mutex) {
+using namespace std;
+NameList::NameList(GamesManager* games, pthread_mutex_t* mutex) :
+	games(games), mutex(mutex) {
 }
 
-void NameList::execute(int destination) {
+void NameList::execute(int client) {
 
-    pthread_mutex_lock(mutex);
-    int size = games->size();
-    write(destination, &size, sizeof(size));
-    for(map<string,int>::iterator it = games->begin(); it != games->end(); ++it) {
-        write(destination, &(it->first), 50);
-    }
-    pthread_mutex_unlock(mutex);
-    close(destination);
+	pthread_mutex_lock(mutex);
+	vector<string>* names = games->getNames();
+	pthread_mutex_unlock(mutex);
+	//send size to client
+	int size = names->size();
+	write(client, &size, sizeof(size));
+	//write all names to client
+	for (vector<string>::iterator it = names->begin(); it != names->end(); ++it) {
+		const char * source = (*it).c_str();
+		StringHandler::writeString(client, (*it).length(), source);
+	}
+	//close client
+	close(client);
 }

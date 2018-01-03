@@ -4,17 +4,19 @@
 #define REVERSI_NAMELIST_H
 
 
-#include <zconf.h>
 #include "Command.h"
 
 
 class NameList: public Command {
 
     public:
-        NameList(map<string,int>* games,pthread_mutex_t* mutex);
-        virtual void execute(int destination);
+        NameList(GamesManager* games,pthread_mutex_t* mutex);
+        /**
+         * sends list of game names to the client
+         */
+        virtual void execute(int client);
     private:
-        map<string,int>* games;
+        GamesManager* games;
         pthread_mutex_t* mutex;
 
 

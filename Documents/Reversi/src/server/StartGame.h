@@ -7,10 +7,13 @@
 class StartGame: public Command {
 
 public:
-	StartGame(map<string,int>* games,pthread_mutex_t* mutex);
-	virtual void execute(int destination);
+	StartGame(GamesManager* games,pthread_mutex_t* mutex);
+	/**
+	 * adds the wanted game's name to the list
+	 */
+	virtual void execute(int client);
 private:
-	map<string,int>* games;
+	GamesManager* games;
 	pthread_mutex_t* mutex;
 };
 

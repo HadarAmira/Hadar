@@ -2649,9 +2649,153 @@ CMakeFiles/Reversi.dir/src/server/Server.cpp.o.provides: CMakeFiles/Reversi.dir/
 CMakeFiles/Reversi.dir/src/server/Server.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/Server.cpp.o
 
 
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o: ../src/server/CommandManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o -c /home/hadar/Documents/Reversi/src/server/CommandManager.cpp
+
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/CommandManager.cpp > CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/CommandManager.cpp -o CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o
+
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.o: ../src/server/Executer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/Reversi.dir/src/server/Executer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/Executer.cpp.o -c /home/hadar/Documents/Reversi/src/server/Executer.cpp
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/Executer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/Executer.cpp > CMakeFiles/Reversi.dir/src/server/Executer.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/Executer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/Executer.cpp -o CMakeFiles/Reversi.dir/src/server/Executer.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/Executer.cpp.o
+
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o: ../src/server/GamesManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o -c /home/hadar/Documents/Reversi/src/server/GamesManager.cpp
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/GamesManager.cpp > CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/GamesManager.cpp -o CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o
+
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o: ../src/server/JoinGame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o -c /home/hadar/Documents/Reversi/src/server/JoinGame.cpp
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/JoinGame.cpp > CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/JoinGame.cpp -o CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o
+
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o: ../src/server/StartGame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o -c /home/hadar/Documents/Reversi/src/server/StartGame.cpp
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/StartGame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/StartGame.cpp > CMakeFiles/Reversi.dir/src/server/StartGame.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/StartGame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/StartGame.cpp -o CMakeFiles/Reversi.dir/src/server/StartGame.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o
+
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o: CMakeFiles/Reversi.dir/flags.make
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o: ../src/server/StringHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o -c /home/hadar/Documents/Reversi/src/server/StringHandler.cpp
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadar/Documents/Reversi/src/server/StringHandler.cpp > CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.i
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadar/Documents/Reversi/src/server/StringHandler.cpp -o CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.s
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.requires
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.provides: CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.provides
+
+CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.provides.build: CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o
+
+
 CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o: ../src/test/gtest_main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o -c /home/hadar/Documents/Reversi/src/test/gtest_main.cpp
 
 CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.i: cmake_force
@@ -2675,7 +2819,7 @@ CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o.provides.build: CMakeFiles/Reve
 
 CMakeFiles/Reversi.dir/src/test/test.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/test/test.cpp.o: ../src/test/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/Reversi.dir/src/test/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/Reversi.dir/src/test/test.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/test/test.cpp.o -c /home/hadar/Documents/Reversi/src/test/test.cpp
 
 CMakeFiles/Reversi.dir/src/test/test.cpp.i: cmake_force
@@ -2699,7 +2843,7 @@ CMakeFiles/Reversi.dir/src/test/test.cpp.o.provides.build: CMakeFiles/Reversi.di
 
 CMakeFiles/Reversi.dir/src/test.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/test.cpp.o: ../src/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/Reversi.dir/src/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/Reversi.dir/src/test.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/test.cpp.o -c /home/hadar/Documents/Reversi/src/test.cpp
 
 CMakeFiles/Reversi.dir/src/test.cpp.i: cmake_force
@@ -2723,7 +2867,7 @@ CMakeFiles/Reversi.dir/src/test.cpp.o.provides.build: CMakeFiles/Reversi.dir/src
 
 CMakeFiles/Reversi.dir/src/server/NameList.cpp.o: CMakeFiles/Reversi.dir/flags.make
 CMakeFiles/Reversi.dir/src/server/NameList.cpp.o: ../src/server/NameList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/Reversi.dir/src/server/NameList.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/Reversi.dir/src/server/NameList.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Reversi.dir/src/server/NameList.cpp.o -c /home/hadar/Documents/Reversi/src/server/NameList.cpp
 
 CMakeFiles/Reversi.dir/src/server/NameList.cpp.i: cmake_force
@@ -2855,6 +2999,12 @@ Reversi_OBJECTS = \
 "CMakeFiles/Reversi.dir/src/lib/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget_test.cc.o" \
 "CMakeFiles/Reversi.dir/src/server/main.cpp.o" \
 "CMakeFiles/Reversi.dir/src/server/Server.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/Executer.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o" \
+"CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o" \
 "CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o" \
 "CMakeFiles/Reversi.dir/src/test/test.cpp.o" \
 "CMakeFiles/Reversi.dir/src/test.cpp.o" \
@@ -2971,13 +3121,19 @@ Reversi: CMakeFiles/Reversi.dir/src/lib/googletest-release-1.8.0/googletest/xcod
 Reversi: CMakeFiles/Reversi.dir/src/lib/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget_test.cc.o
 Reversi: CMakeFiles/Reversi.dir/src/server/main.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/server/Server.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/Executer.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o
+Reversi: CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/test/test.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/test.cpp.o
 Reversi: CMakeFiles/Reversi.dir/src/server/NameList.cpp.o
 Reversi: CMakeFiles/Reversi.dir/build.make
 Reversi: CMakeFiles/Reversi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Linking CXX executable Reversi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hadar/Documents/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Linking CXX executable Reversi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Reversi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -3093,6 +3249,12 @@ CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/lib/googletest-relea
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/lib/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget_test.cc.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/main.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/Server.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/CommandManager.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/Executer.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/GamesManager.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/JoinGame.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/StartGame.cpp.o.requires
+CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/server/StringHandler.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/test/gtest_main.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/test/test.cpp.o.requires
 CMakeFiles/Reversi.dir/requires: CMakeFiles/Reversi.dir/src/test.cpp.o.requires

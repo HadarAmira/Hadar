@@ -1,9 +1,4 @@
-/*
- * Point.h
- * 305798752
- *  Created on: Nov 3, 2017
- *      Author: zvi
- */
+
 #include <string>
 using namespace std;
 

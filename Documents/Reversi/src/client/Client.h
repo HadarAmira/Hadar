@@ -19,9 +19,9 @@ public:
 	void connectToServer();
 	void sendMove(Point move) const;
 	void sendMove(int x) const;
-	void sendMove(char* x) const;
+	void sendMove(const char* source, int length) const;
 	int getInt();
-	char* getString();
+	void getString(int length, char *dest);
 	Point getMove();
 private:
 	char* serverIP;

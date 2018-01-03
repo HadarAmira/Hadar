@@ -12,11 +12,17 @@
 
 class JoinGame: public Command {
 public:
-	JoinGame(map<string,int>* games,pthread_mutex_t* mutex);
-	virtual void execute(int destination);
+	JoinGame(GamesManager* games,pthread_mutex_t* mutex);
+	/*
+	 * reads to wanted name from client and starts the game
+	 */
+	virtual void execute(int client);
 private:
-	map<string,int>* games;
+	GamesManager* games;
 	pthread_mutex_t* mutex;
+	/**
+	 * Handles the game procedure
+	 */
 	void handleClients(int client1,int client2);
 };
 

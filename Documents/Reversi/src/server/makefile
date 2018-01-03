@@ -1,5 +1,9 @@
-a.out: main.cpp Server.cpp
-	g++ main.cpp Server.cpp
-	./a.out
+ReversiGame.out: compileAll
+	g++ *.o -pthread -o ./ReversiGame.out
+	rm -f *.o
+
+compileAll: *.h *.cpp
+	    g++ -c -pthread *.cpp
+
 run:
-	./a.out
+	./ReversiGame.out 
