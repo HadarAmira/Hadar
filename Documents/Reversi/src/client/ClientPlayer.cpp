@@ -7,6 +7,11 @@
 #include <string.h>
 #include <sstream>
 #include <iostream>
+<<<<<<< HEAD
+#include <sys/socket.h>
+
+=======
+>>>>>>> 552efa29b9603f491953c7bc9dc155b438cf0de8
 #define WAIT_FOR_CONNECTION 3
 #define DISCONNECTED -4
 #define WRONG_NAME -3
@@ -14,12 +19,23 @@
 #define MAX_COMMAND 10
 #define MAX_NAME 50
 ClientPlayer::ClientPlayer(Game* game, Graphic* g) :
+<<<<<<< HEAD
+	game(game), client("/home/hadar/Documents/Reversi/exe/settings.txt") {
+
+	int res;
+	string m;
+
+
+	while (true) {
+
+=======
 	game(game), client("settings.txt") {
 
 	int res;
 	string m;
 
 	while (true) {
+>>>>>>> 552efa29b9603f491953c7bc9dc155b438cf0de8
 		client.connectToServer();
 
 		m = "Welcome, please choose an option: ";
