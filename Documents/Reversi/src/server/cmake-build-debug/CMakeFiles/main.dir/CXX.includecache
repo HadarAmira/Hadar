@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hadar/Documents/Reversi/src/server/Server.cpp
+Server.h
+/home/hadar/Documents/Reversi/src/server/Server.h
+sys/socket.h
+-
+netinet/in.h
+-
+unistd.h
+-
+string.h
+-
+iostream
+-
+stdio.h
+-
+fstream
+-
+
+/home/hadar/Documents/Reversi/src/server/Server.h
+
+/home/hadar/Documents/Reversi/src/server/main.cpp
+Server.h
+/home/hadar/Documents/Reversi/src/server/Server.h
+iostream
+-
+stdlib.h
+-
+
