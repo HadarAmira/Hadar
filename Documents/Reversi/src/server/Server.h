@@ -18,7 +18,11 @@ private:
 	int serverSocket; // the socket's file descriptor
 	CommandManager cm;
 	int min,max;
+<<<<<<< HEAD
     ThreadPool tPool;
+=======
+
+>>>>>>> c9ce2ab50e2d97902b326f0af4a958cf7261a42b
 };
 #endif /* SERVER_H_ */
 

@@ -14,7 +14,11 @@
 #define MAX_COMMAND 10
 #define MAX_NAME 50
 ClientPlayer::ClientPlayer(Game* game, Graphic* g) :
+<<<<<<< HEAD
 		game(game), client("/home/hadar/Documents/Reversi/exe/settings.txt") {
+=======
+	game(game), client("settings.txt") {
+>>>>>>> c9ce2ab50e2d97902b326f0af4a958cf7261a42b
 
 	int res;
 	string m;
