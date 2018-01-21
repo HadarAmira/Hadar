@@ -35,7 +35,7 @@ set(SERVER_SOURCE_FILES
         server/main.cpp
         server/Server.cpp
         server/Server.h
-        )
+        server/ThreadPool.cpp server/ThreadPool.h)
 file(GLOB SERVER_SOURCE_FILES ${src_SOURCE_DIR}/server/*.cpp)
 
 set(TEST_SOURCE_FILES

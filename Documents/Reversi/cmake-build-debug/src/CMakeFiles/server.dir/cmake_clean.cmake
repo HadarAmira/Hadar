@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server/Server.cpp.o"
   "CMakeFiles/server.dir/server/StartGame.cpp.o"
   "CMakeFiles/server.dir/server/StringHandler.cpp.o"
+  "CMakeFiles/server.dir/server/ThreadPool.cpp.o"
   "CMakeFiles/server.dir/server/main.cpp.o"
   "server.pdb"
   "server"

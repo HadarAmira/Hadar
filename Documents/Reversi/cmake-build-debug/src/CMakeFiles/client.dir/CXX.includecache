@@ -47,6 +47,8 @@ libio.h
 -
 fstream
 -
+stdlib.h
+-
 
 /home/hadar/Documents/Reversi/src/client/Client.h
 libio.h
@@ -64,8 +66,6 @@ string.h
 sstream
 -
 iostream
--
-sys/socket.h
 -
 
 /home/hadar/Documents/Reversi/src/client/ClientPlayer.h

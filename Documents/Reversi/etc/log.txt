@@ -1,3 +1,72 @@
+commit a06bac8be3d3c2192187e808a7ac338ba4fdb999
+Merge: bd040a2 91b4a6b
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Wed Jan 3 13:11:19 2018 +0200
+
+    0Merge branch 'master' of https://github.com/HadarAmira/HadaE
+
+commit bd040a2a40b05164b530f153eaf89d829cbfba65
+Merge: 777f365 552efa2
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Wed Jan 3 13:08:15 2018 +0200
+
+    efes
+
+commit 91b4a6b119cc75455e509445141fd18d0f85d375
+Author: HadarAmira <33876267+HadarAmira@users.noreply.github.com>
+Date:   Wed Jan 3 13:06:40 2018 +0200
+
+    Update ClientPlayer.cpp
+
+commit 777f3653e15430a6ae7785c0871c7916ee596936
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Wed Jan 3 13:02:46 2018 +0200
+
+    efes
+
+commit 552efa29b9603f491953c7bc9dc155b438cf0de8
+Author: zviLib <33876270+zviLib@users.noreply.github.com>
+Date:   Sun Dec 31 18:08:43 2017 +0200
+
+    Delete settings.txt
+
+commit ab12d76b14e1a364d23924d4f23476a6238a7c4e
+Author: zviLib <33876270+zviLib@users.noreply.github.com>
+Date:   Sun Dec 31 18:08:26 2017 +0200
+
+    Delete makefile
+
+commit 02224eab9402950442412fd93ca1814675181785
+Author: zviLib <zvi.lib1@gmail.com>
+Date:   Thu Dec 28 18:46:59 2017 +0200
+
+    final threads
+
+commit bbcc40a2b4e931606bac2b925bcef73c550f05c3
+Author: zviLib <33876270+zviLib@users.noreply.github.com>
+Date:   Wed Dec 27 13:48:23 2017 +0200
+
+    Update NameList.h
+
+commit a7dfdcdafd2288a581399e8d6e18c70346256fe1
+Merge: 546c907 40b05e0
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Tue Dec 26 21:25:47 2017 +0200
+
+    Merge branch 'master' of https://github.com/HadarAmira/Hadar
+
+commit 546c907d44a1885c60d970a618609f671ced2b61
+Author: HadarAmira <hadaramira82@gmail.com>
+Date:   Tue Dec 26 21:21:47 2017 +0200
+
+    ex5
+
+commit 40b05e05c3cbd6e833b8254366dce4d21881cc0f
+Author: zviLib <zvi.lib1@gmail.com>
+Date:   Tue Dec 26 18:39:33 2017 +0200
+
+    TH
+
 commit 8fb94ea1c0011aac52496612dca64160740fc52a
 Author: HadarAmira <hadaramira82@gmail.com>
 Date:   Sun Dec 10 20:18:51 2017 +0200

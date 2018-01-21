@@ -42,6 +42,7 @@ src/CMakeFiles/server.dir/server/Server.cpp.o
  /home/hadar/Documents/Reversi/src/server/Server.cpp
  /home/hadar/Documents/Reversi/src/server/Server.h
  /home/hadar/Documents/Reversi/src/server/StringHandler.h
+ /home/hadar/Documents/Reversi/src/server/ThreadPool.h
 src/CMakeFiles/server.dir/server/StartGame.cpp.o
  /home/hadar/Documents/Reversi/src/server/Command.h
  /home/hadar/Documents/Reversi/src/server/GamesManager.h
@@ -51,6 +52,15 @@ src/CMakeFiles/server.dir/server/StartGame.cpp.o
 src/CMakeFiles/server.dir/server/StringHandler.cpp.o
  /home/hadar/Documents/Reversi/src/server/StringHandler.cpp
  /home/hadar/Documents/Reversi/src/server/StringHandler.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o
+ /home/hadar/Documents/Reversi/src/server/Command.h
+ /home/hadar/Documents/Reversi/src/server/CommandManager.h
+ /home/hadar/Documents/Reversi/src/server/ConnDet.h
+ /home/hadar/Documents/Reversi/src/server/Executer.h
+ /home/hadar/Documents/Reversi/src/server/GamesManager.h
+ /home/hadar/Documents/Reversi/src/server/StringHandler.h
+ /home/hadar/Documents/Reversi/src/server/ThreadPool.cpp
+ /home/hadar/Documents/Reversi/src/server/ThreadPool.h
 src/CMakeFiles/server.dir/server/main.cpp.o
  /home/hadar/Documents/Reversi/src/server/Command.h
  /home/hadar/Documents/Reversi/src/server/CommandManager.h
@@ -59,4 +69,5 @@ src/CMakeFiles/server.dir/server/main.cpp.o
  /home/hadar/Documents/Reversi/src/server/GamesManager.h
  /home/hadar/Documents/Reversi/src/server/Server.h
  /home/hadar/Documents/Reversi/src/server/StringHandler.h
+ /home/hadar/Documents/Reversi/src/server/ThreadPool.h
  /home/hadar/Documents/Reversi/src/server/main.cpp

@@ -13,14 +13,17 @@
 #include <unistd.h>
 #include <libio.h>
 #include <fstream>
+#include <stdlib.h>
+
+#define SERVER_CLOSED -5
 
 using namespace std;
 
 Client::Client() :
-	serverIP(0), serverPort(0), clientSocket(0) {
+		serverIP(0), serverPort(0), clientSocket(0) {
 }
 Client::Client(char *serverIP, int serverPort) :
-	serverIP(serverIP), serverPort(serverPort), clientSocket(0) {
+		serverIP(serverIP), serverPort(serverPort), clientSocket(0) {
 
 }
 
@@ -64,12 +67,12 @@ void Client::connectToServer() {
 	bzero((char *) &address, sizeof(address));
 	serverAddress.sin_family = AF_INET;
 	memcpy((char *) &serverAddress.sin_addr.s_addr, (char *) server->h_addr,
-			server->h_length);
+		   server->h_length);
 	// htons converts values between host and network byte orders
 	serverAddress.sin_port = htons(serverPort);
 	// Establish a connection with the TCP server
 	if (connect(clientSocket, (struct sockaddr *) &serverAddress,
-			sizeof(serverAddress)) == -1) {
+				sizeof(serverAddress)) == -1) {
 		throw "Error connecting to server";
 	}
 }
@@ -106,7 +109,15 @@ Point Client::getMove() {
 	int n, n2;
 	int x, y;
 	n = read(clientSocket, &x, sizeof(x));
+	if (x == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	n2 = read(clientSocket, &y, sizeof(y));
+	if (y == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	if (n == -1 || n2 == -1) {
 		throw "Error reading move from socket";
 	}
@@ -117,6 +128,10 @@ Point Client::getMove() {
 int Client::getInt() {
 	int x, n;
 	n = read(clientSocket, &x, sizeof(x));
+	if (x == SERVER_CLOSED) {
+		cout << "Server Closed." << endl;
+		exit(-1);
+	}
 	if (n == -1) {
 		throw "Error writing move to socket";
 	}
@@ -127,6 +142,10 @@ void Client::getString(int length, char *dest) {
 	char c;
 	for (int i = 0; i < length; i++) {
 		read(clientSocket, &sym, sizeof(sym));
+		if (sym == SERVER_CLOSED) {
+			cout << "Server Closed." << endl;
+			exit(-1);
+		}
 		c = (char) sym;
 		dest[i] = c;
 	}

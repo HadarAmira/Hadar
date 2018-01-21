@@ -714,6 +714,33 @@ server/StringHandler.cpp.s:
 	cd /home/hadar/Documents/Reversi/cmake-build-debug && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/StringHandler.cpp.s
 .PHONY : server/StringHandler.cpp.s
 
+server/ThreadPool.o: server/ThreadPool.cpp.o
+
+.PHONY : server/ThreadPool.o
+
+# target to build an object file
+server/ThreadPool.cpp.o:
+	cd /home/hadar/Documents/Reversi/cmake-build-debug && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/ThreadPool.cpp.o
+.PHONY : server/ThreadPool.cpp.o
+
+server/ThreadPool.i: server/ThreadPool.cpp.i
+
+.PHONY : server/ThreadPool.i
+
+# target to preprocess a source file
+server/ThreadPool.cpp.i:
+	cd /home/hadar/Documents/Reversi/cmake-build-debug && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/ThreadPool.cpp.i
+.PHONY : server/ThreadPool.cpp.i
+
+server/ThreadPool.s: server/ThreadPool.cpp.s
+
+.PHONY : server/ThreadPool.s
+
+# target to generate assembly for a file
+server/ThreadPool.cpp.s:
+	cd /home/hadar/Documents/Reversi/cmake-build-debug && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/server/ThreadPool.cpp.s
+.PHONY : server/ThreadPool.cpp.s
+
 server/main.o: server/main.cpp.o
 
 .PHONY : server/main.o
@@ -864,6 +891,9 @@ help:
 	@echo "... server/StringHandler.o"
 	@echo "... server/StringHandler.i"
 	@echo "... server/StringHandler.s"
+	@echo "... server/ThreadPool.o"
+	@echo "... server/ThreadPool.i"
+	@echo "... server/ThreadPool.s"
 	@echo "... server/main.o"
 	@echo "... server/main.i"
 	@echo "... server/main.s"

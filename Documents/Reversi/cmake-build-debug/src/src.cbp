@@ -546,6 +546,12 @@
 		<Unit filename="/home/hadar/Documents/Reversi/src/server/StringHandler.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/server/ThreadPool.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/hadar/Documents/Reversi/src/server/ThreadPool.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/hadar/Documents/Reversi/src/server/main.cpp">
 			<Option target="server"/>
 		</Unit>

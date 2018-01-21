@@ -41,6 +41,7 @@ src/CMakeFiles/server.dir/server/Server.cpp.o: ../src/server/GamesManager.h
 src/CMakeFiles/server.dir/server/Server.cpp.o: ../src/server/Server.cpp
 src/CMakeFiles/server.dir/server/Server.cpp.o: ../src/server/Server.h
 src/CMakeFiles/server.dir/server/Server.cpp.o: ../src/server/StringHandler.h
+src/CMakeFiles/server.dir/server/Server.cpp.o: ../src/server/ThreadPool.h
 
 src/CMakeFiles/server.dir/server/StartGame.cpp.o: ../src/server/Command.h
 src/CMakeFiles/server.dir/server/StartGame.cpp.o: ../src/server/GamesManager.h
@@ -51,6 +52,15 @@ src/CMakeFiles/server.dir/server/StartGame.cpp.o: ../src/server/StringHandler.h
 src/CMakeFiles/server.dir/server/StringHandler.cpp.o: ../src/server/StringHandler.cpp
 src/CMakeFiles/server.dir/server/StringHandler.cpp.o: ../src/server/StringHandler.h
 
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/Command.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/CommandManager.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/ConnDet.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/Executer.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/GamesManager.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/StringHandler.h
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/ThreadPool.cpp
+src/CMakeFiles/server.dir/server/ThreadPool.cpp.o: ../src/server/ThreadPool.h
+
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/Command.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/CommandManager.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/ConnDet.h
@@ -58,5 +68,6 @@ src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/Executer.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/GamesManager.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/Server.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/StringHandler.h
+src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/ThreadPool.h
 src/CMakeFiles/server.dir/server/main.cpp.o: ../src/server/main.cpp
 
